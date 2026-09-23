@@ -1415,11 +1415,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Gallery Card */
 .gallery-card {
+  position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
   background-color: var(--surface);
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition), box-shadow var(--transition), opacity 0.3s ease;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  opacity: 1;
 }
 
 .gallery-card.is-hidden {
@@ -1579,7 +1583,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   inset: 0;
   z-index: 9999;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -1588,6 +1592,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .lightbox-modal.is-open {
+  display: flex;
   opacity: 1;
   pointer-events: auto;
 }
