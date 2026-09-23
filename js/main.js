@@ -500,6 +500,38 @@
       if (e.key === 'ArrowLeft') showItem(currentIndex - 1);
       if (e.key === 'ArrowRight') showItem(currentIndex + 1);
     });
+
+    // Touch swipe gesture support for mobile devices
+    let touchStartX = 0;
+    let touchStartY = 0;
+    let touchStartTime = 0;
+
+    modal.addEventListener('touchstart', function(e) {
+      if (e.touches && e.touches.length === 1) {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+        touchStartTime = Date.now();
+      }
+    }, { passive: true });
+
+    modal.addEventListener('touchend', function(e) {
+      if (e.changedTouches && e.changedTouches.length === 1) {
+        const touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
+        const diffX = touchEndX - touchStartX;
+        const diffY = touchEndY - touchStartY;
+        const elapsed = Date.now() - touchStartTime;
+
+        // If swipe is horizontal (> 40px) and fast (< 600ms)
+        if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY) * 1.4 && elapsed < 600) {
+          if (diffX < 0) {
+            showItem(currentIndex + 1); // Swiped left -> next
+          } else {
+            showItem(currentIndex - 1); // Swiped right -> previous
+          }
+        }
+      }
+    }, { passive: true });
   }
 
 })();
