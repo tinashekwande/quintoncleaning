@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found | Quinton Chinoz Projects</title>
+  <meta name="robots" content="noindex, follow">
+  <meta name="google-site-verification" content="jlKNvvFGlhOj3BowBEhxcoNwk9kNhjbVJVCLew6ni5Y" />
+  <title>Page Not Found | Quinton Chinoz Projects Cape Town</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,16 +24,15 @@
       background-color: #FAFAFA;
       color: #2C2C2C;
       font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      padding: 1.5rem;
+      padding: 2rem 1.5rem;
       text-align: center;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
     .error-container {
-      max-width: 520px;
+      max-width: 580px;
       width: 100%;
-      padding: 2.5rem 1.5rem;
+      padding: 2rem 1.5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -39,31 +40,72 @@
 
     .error-code {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(6rem, 20vw, 9.5rem);
+      font-size: clamp(5rem, 16vw, 8rem);
       font-weight: 700;
       line-height: 0.95;
       color: #C0392B;
-      margin-bottom: 1rem;
-      user-select: none;
+      margin-bottom: 0.75rem;
       letter-spacing: -0.02em;
     }
 
     .error-title {
       font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      font-size: clamp(1.75rem, 5vw, 2.25rem);
       font-weight: 600;
       color: #2C2C2C;
       line-height: 1.2;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
 
     .error-message {
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+      font-size: 0.95rem;
       color: #555555;
       line-height: 1.6;
-      margin-bottom: 2.25rem;
-      max-width: 400px;
+      margin-bottom: 1.75rem;
+      max-width: 440px;
+    }
+
+    .helpful-links-heading {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 600;
+      color: #C0392B;
+      margin-bottom: 0.75rem;
+    }
+
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.5rem;
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .links-grid a {
+      padding: 0.6rem 0.75rem;
+      background: #FFFFFF;
+      border: 1px solid #E5E7EB;
+      border-radius: 6px;
+      color: #2C2C2C;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .links-grid a:hover {
+      border-color: #C0392B;
+      color: #C0392B;
+      background: #FFF5F5;
+      transform: translateY(-1px);
+    }
+
+    .actions-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
     }
 
     .home-btn {
@@ -73,39 +115,60 @@
       background-color: #C0392B;
       color: #FFFFFF;
       text-decoration: none;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       font-weight: 600;
-      letter-spacing: 0.02em;
-      padding: 0.875rem 2.25rem;
+      padding: 0.75rem 1.75rem;
       border-radius: 6px;
-      box-shadow: 0 4px 14px rgba(192, 57, 43, 0.25);
-      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+      transition: background-color 0.2s ease, transform 0.15s ease;
     }
 
     .home-btn:hover {
       background-color: #a93226;
       transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(192, 57, 43, 0.35);
     }
 
-    .home-btn:active {
-      transform: translateY(0);
-      box-shadow: 0 2px 8px rgba(192, 57, 43, 0.25);
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #25D366;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.75rem 1.75rem;
+      border-radius: 6px;
+      transition: background-color 0.2s ease, transform 0.15s ease;
     }
 
-    .home-btn:focus-visible {
-      outline: 2px solid #C0392B;
-      outline-offset: 3px;
+    .whatsapp-btn:hover {
+      background-color: #1ea952;
+      transform: translateY(-2px);
     }
   </style>
 </head>
 <body>
-  <main class="error-container" style="max-width: 520px; width: 100%; padding: 2.5rem 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center;">
-    <div class="error-code" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(6rem, 20vw, 9.5rem); font-weight: 700; line-height: 0.95; color: #C0392B; margin-bottom: 1rem;">404</div>
-    <h1 class="error-title" style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: clamp(1.75rem, 5vw, 2.5rem); font-weight: 600; color: #2C2C2C; line-height: 1.2; margin-bottom: 1rem;">Page Not Found</h1>
-    <p class="error-message" style="font-family: 'Montserrat', sans-serif; font-size: clamp(0.95rem, 2.5vw, 1.05rem); color: #555555; line-height: 1.6; margin-bottom: 2.25rem; max-width: 400px;">The page you're looking for doesn't exist or has been moved.</p>
-    <a href="/" class="home-btn" style="display: inline-flex; align-items: center; justify-content: center; background-color: #C0392B; color: #FFFFFF; text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 600; padding: 0.875rem 2.25rem; border-radius: 6px;">Back to Home</a>
+  <main class="error-container">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Page Not Found</h1>
+    <p class="error-message">The page you are looking for may have moved or no longer exists. Let's get you back to the right place:</p>
+
+    <div class="helpful-links-heading">Popular Cleaning Services</div>
+    <div class="links-grid">
+      <a href="couch-cleaning.html">Couch Cleaning</a>
+      <a href="carpet-cleaning.html">Carpet Cleaning</a>
+      <a href="mattress-cleaning.html">Mattress Sanitisation</a>
+      <a href="tile-and-grout-cleaning.html">Tile &amp; Grout</a>
+      <a href="vehicle-upholstery-cleaning.html">Vehicle Interior</a>
+      <a href="areas-served.html">Areas We Serve</a>
+      <a href="gallery.html">Work Gallery</a>
+      <a href="about.html">About Us</a>
+    </div>
+
+    <div class="actions-wrap">
+      <a href="/" class="home-btn">Back to Homepage</a>
+      <a href="https://wa.me/27677352364?text=Hi%2C%20I%20hit%20a%20broken%20link%20on%20your%20website%20and%20would%20like%20to%20enquire%20about%20cleaning%20services." class="whatsapp-btn" target="_blank" rel="noopener noreferrer">WhatsApp 067 735 2364</a>
+    </div>
   </main>
 </body>
 </html>

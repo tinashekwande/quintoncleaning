@@ -39,20 +39,45 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "ImageGallery",
-        "name": "Quinton Chinoz Projects Portfolio Gallery",
-        "description": "Showcase of deep cleaning projects for couches, carpets, mattresses and vehicles in Cape Town.",
-        "provider": {
-            "@type": "LocalBusiness",
-            "name": "Quinton Chinoz Projects",
-            "telephone": "+27677352364",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Kraaifontein",
-                "addressRegion": "Western Cape",
-                "addressCountry": "ZA"
+        "@graph": [
+            {
+                "@type": "ImageGallery",
+                "@id": "https://quintoncleaning.co.za/gallery.html#gallery",
+                "name": "Quinton Chinoz Projects Portfolio Gallery",
+                "description": "Showcase of 40+ verified deep cleaning transformations for couches, carpets, mattresses and vehicles in Cape Town.",
+                "url": "https://quintoncleaning.co.za/gallery.html",
+                "provider": {
+                    "@type": "CleaningService",
+                    "@id": "https://quintoncleaning.co.za/#business",
+                    "name": "Quinton Chinoz Projects",
+                    "telephone": "+27677352364",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Kraaifontein",
+                        "addressRegion": "Western Cape",
+                        "addressCountry": "ZA"
+                    }
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://quintoncleaning.co.za/gallery.html#breadcrumbs",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://quintoncleaning.co.za/"
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Project Gallery",
+                        "item": "https://quintoncleaning.co.za/gallery.html"
+                    }
+                ]
             }
-        }
+        ]
     }
     </script>
 </head>
@@ -72,11 +97,23 @@
             <nav aria-label="Main navigation">
                 <ul class="nav-links" role="list">
                     <li><a href="/">Home</a></li>
+                    <li class="nav-item-dropdown">
+                        <a href="/#services">
+                            Services
+                            <iconify-icon icon="solar:alt-arrow-down-linear" class="nav-dropdown-chevron" aria-hidden="true"></iconify-icon>
+                        </a>
+                        <ul class="nav-dropdown-menu" role="list">
+                            <li><a href="couch-cleaning.html"><iconify-icon icon="solar:armchair-bold"></iconify-icon> Couch &amp; Upholstery</a></li>
+                            <li><a href="carpet-cleaning.html"><iconify-icon icon="solar:layers-minimalistic-bold"></iconify-icon> Carpet &amp; Rugs</a></li>
+                            <li><a href="mattress-cleaning.html"><iconify-icon icon="solar:bed-bold"></iconify-icon> Mattress Sanitisation</a></li>
+                            <li><a href="tile-and-grout-cleaning.html"><iconify-icon icon="solar:widget-add-bold"></iconify-icon> Tile &amp; Grout Cleaning</a></li>
+                            <li><a href="vehicle-upholstery-cleaning.html"><iconify-icon icon="solar:wheel-bold"></iconify-icon> Vehicle Upholstery</a></li>
+                        </ul>
+                    </li>
                     <li><a href="/#reviews">Reviews</a></li>
-                    <li><a href="/#services">Services</a></li>
-                    <li><a href="/#why-us">Why Us</a></li>
-                    <li><a href="/#process">Process</a></li>
-                    <li><a href="/gallery.html" class="active">Gallery</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="areas-served.html">Areas Served</a></li>
+                    <li><a href="about.html">About</a></li>
                     <li><a href="/#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -101,12 +138,16 @@
         <nav aria-label="Mobile navigation">
             <ul class="nav-links" role="list">
                 <li><a href="/">Home</a></li>
-                <li><a href="/#reviews">Reviews</a></li>
-                <li><a href="/#services">Services</a></li>
-                <li><a href="/#why-us">Why Us</a></li>
-                <li><a href="/#process">Process</a></li>
-                <li><a href="/gallery.html" class="active">Gallery</a></li>
-                <li><a href="/#contact">Contact</a></li>
+                <li><a href="couch-cleaning.html">Couch &amp; Upholstery Cleaning</a></li>
+                <li><a href="carpet-cleaning.html">Carpet &amp; Rug Cleaning</a></li>
+                <li><a href="mattress-cleaning.html">Mattress Sanitisation</a></li>
+                <li><a href="tile-and-grout-cleaning.html">Tile &amp; Grout Cleaning</a></li>
+                <li><a href="vehicle-upholstery-cleaning.html">Vehicle Interior Cleaning</a></li>
+                <li><a href="/#reviews">Customer Reviews</a></li>
+                <li><a href="gallery.html" class="active">Project Gallery</a></li>
+                <li><a href="areas-served.html">Areas Served</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="/#contact">Contact / Request Quote</a></li>
             </ul>
         </nav>
         <a href="https://wa.me/27677352364?text=Hi%2C%20I%20saw%20your%20gallery%20and%20would%20like%20to%20request%20a%20quote." class="btn btn-whatsapp btn-lg" style="margin-top: 2rem; width: 100%;" target="_blank" rel="noopener noreferrer">
@@ -123,6 +164,14 @@
         <!-- ====== GALLERY HERO BANNER ====== -->
         <section class="gallery-hero" aria-labelledby="gallery-hero-heading">
             <div class="gallery-hero-inner container">
+                <nav class="breadcrumbs" aria-label="Breadcrumb" style="justify-content: center; margin-bottom: 1.5rem;">
+                    <ol class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-separator"><iconify-icon icon="solar:alt-arrow-right-linear"></iconify-icon></li>
+                        <li class="breadcrumb-item active" aria-current="page">Project Gallery</li>
+                    </ol>
+                </nav>
+
                 <span class="hero-badge">
                     <iconify-icon icon="solar:camera-bold" aria-hidden="true"></iconify-icon>
                     Real Work Portfolio
@@ -1131,7 +1180,18 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <img src="images/logo-brand-highres.png" alt="Quinton Chinoz Projects" width="131" height="72" loading="lazy">
-                    <p>Professional deep cleaning services for carpets, couches, mattresses and tiles. Serving Kraaifontein and the greater Cape Town area with eco-friendly cleaning solutions.</p>
+                    <p>Professional deep cleaning services for couches, carpets, mattresses, tiles, and car interiors. Serving Kraaifontein and Greater Cape Town with eco-friendly cleaning solutions.</p>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links" role="list">
+                        <li><a href="couch-cleaning.html">Couch &amp; Upholstery</a></li>
+                        <li><a href="carpet-cleaning.html">Carpet &amp; Rug Cleaning</a></li>
+                        <li><a href="mattress-cleaning.html">Mattress Sanitisation</a></li>
+                        <li><a href="tile-and-grout-cleaning.html">Tile &amp; Grout Cleaning</a></li>
+                        <li><a href="vehicle-upholstery-cleaning.html">Vehicle Interior Cleaning</a></li>
+                    </ul>
                 </div>
 
                 <div>
@@ -1139,10 +1199,9 @@
                     <ul class="footer-links" role="list">
                         <li><a href="/">Home</a></li>
                         <li><a href="/#reviews">Client Reviews</a></li>
-                        <li><a href="/#services">Services</a></li>
-                        <li><a href="/#why-us">Why Choose Us</a></li>
-                        <li><a href="/#process">Our Process</a></li>
-                        <li><a href="/gallery.html">Project Gallery</a></li>
+                        <li><a href="gallery.html">Project Gallery</a></li>
+                        <li><a href="areas-served.html">Areas We Serve</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="/#contact">Get a Quote</a></li>
                     </ul>
                 </div>
@@ -1153,19 +1212,19 @@
                         <li>
                             <a href="https://wa.me/27677352364?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20cleaning%20services." target="_blank" rel="noopener noreferrer">
                                 <iconify-icon icon="mdi:whatsapp" aria-hidden="true" style="vertical-align: -2px;"></iconify-icon>
-                                WhatsApp
+                                WhatsApp (067 735 2364)
                             </a>
                         </li>
                         <li>
                             <a href="tel:+27677352364">
                                 <iconify-icon icon="solar:phone-linear" aria-hidden="true" style="vertical-align: -2px;"></iconify-icon>
-                                067 735 2364
+                                Call 067 735 2364
                             </a>
                         </li>
                         <li>
                             <a href="https://www.facebook.com/profile.php?id=61556597447832" target="_blank" rel="noopener noreferrer">
                                 <iconify-icon icon="mdi:facebook" aria-hidden="true" style="vertical-align: -2px;"></iconify-icon>
-                                Facebook
+                                Facebook Profile
                             </a>
                         </li>
                     </ul>
@@ -1174,7 +1233,7 @@
 
             <div class="footer-bottom">
                 <p>&copy; <span id="copyright-year">2026</span> Quinton Chinoz Projects. All rights reserved.</p>
-                <p style="font-size: 0.75rem; color: rgba(255,255,255,0.3);">Kraaifontein, Cape Town, South Africa</p>
+                <p style="font-size: 0.75rem; color: rgba(255,255,255,0.4);">Kraaifontein, Cape Town, Western Cape, South Africa</p>
             </div>
         </div>
     </footer>
